@@ -6,6 +6,8 @@ Fade Boba was developed as a **team project at Texas A&M University**. The origi
 
 **Tech:** React · JavaScript · Node.js · Express · PostgreSQL · REST APIs · Google OAuth · Google Gemini
 
+**Live Demo:** https://project3-team21-fade-boba-1.onrender.com/
+
 ## What the Application Does
 
 Fade Boba supports three main workflows:
