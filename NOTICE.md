@@ -1,7 +1,9 @@
-# Portfolio Snapshot Notice
+# Project Note
 
-This repository is a sanitized public snapshot of a collaborative Texas A&M academic project.
+Fade Boba was built as a collaborative CSCE 331 project at Texas A&M University.
 
-The original team repository remains private. This snapshot intentionally excludes credentials, private infrastructure information, personal staff-account details, and original image assets whose licensing could not be verified from the source archive.
+The original repository is kept under the course organization and is not public. I created this personal copy so recruiters can review the project and my contributions.
 
-Public visibility is provided for portfolio and code-review purposes only. No open-source license is granted.
+Before publishing it, I removed private credentials, course-hosted infrastructure details, personal account information, and other material that should not be publicly shared. The original team development history is therefore not reproduced in this repository.
+
+See [CONTRIBUTIONS.md](./CONTRIBUTIONS.md) for the work that was specifically assigned to me.
