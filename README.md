@@ -2,7 +2,7 @@
 
 A full-stack point-of-sale and shop operations platform built with React, Node.js/Express, and PostgreSQL.
 
-Fade Boba was developed as a **team project for CSCE 331 at Texas A&M University**. The original repository is maintained under the course organization and is not publicly accessible, so I created this sanitized copy on my personal GitHub to make the project reviewable by recruiters. The application code remains a team effort; the section below calls out the work that was specifically assigned to me during the project.
+Fade Boba was developed as a **team project at Texas A&M University**. The original repository is maintained under the course organization and is not publicly accessible, so I created this sanitized copy on my personal GitHub to make the project reviewable by recruiters. The application code remains a team effort; the section below calls out the work that was specifically assigned to me during the project.
 
 **Tech:** React · JavaScript · Node.js · Express · PostgreSQL · REST APIs · Google OAuth · Google Gemini
 
