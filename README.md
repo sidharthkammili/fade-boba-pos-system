@@ -1,87 +1,133 @@
 # Fade Boba POS System
 
-A full-stack point-of-sale and operations platform for a bubble tea shop, developed as a collaborative software engineering project at Texas A&M University.
+A full-stack point-of-sale and shop operations platform built with React, Node.js/Express, and PostgreSQL.
 
-This repository is a **sanitized public portfolio snapshot** of the original private team project. Credentials, course-hosted database access, personal staff-account information, private deployment configuration, and unverified third-party image assets have been removed or replaced before publication.
+Fade Boba was developed as a **team project for CSCE 331 at Texas A&M University**. The original repository is maintained under the course organization and is not publicly accessible, so I created this sanitized copy on my personal GitHub to make the project reviewable by recruiters. The application code remains a team effort; the section below calls out the work that was specifically assigned to me during the project.
 
-## Project Overview
+**Tech:** React · JavaScript · Node.js · Express · PostgreSQL · REST APIs · Google OAuth · Google Gemini
 
-Fade Boba combines a React frontend, a Node.js/Express REST API, and PostgreSQL to support customer ordering, cashier workflows, manager operations, reporting, accessibility features, external API integrations, and an AI-powered menu assistant.
+## What the Application Does
 
-The application is organized around three primary interfaces:
+Fade Boba supports three main workflows:
 
-- **Customer kiosk** for browsing, customizing, and placing drink orders
-- **Cashier POS** for processing orders, tracking queues, viewing history, and handling refunds
-- **Manager dashboard** for inventory, employee, recipe, pricing, and sales-report workflows
+- **Customer kiosk** — browse the menu, customize drinks, manage a cart, place orders, view receipts, save favorites, reorder previous purchases, and receive weather-aware recommendations
+- **Cashier POS** — create and customize orders, manage the order queue, review transactions, view receipts, and process refunds
+- **Manager dashboard** — manage inventory, employees, recipes, menu pricing, and sales reporting
 
-## Features
+The project also includes accessibility features, multilingual support, usability testing tools, and an AI-powered menu assistant.
+
+## My Contributions
+
+According to our team sprint backlog, my assigned work included the following.
+
+### Backend and Deployment
+
+- Developed backend routes during the first sprint
+- Deployed the backend MVP to Render
+- Helped establish the backend portion of the application's client/server workflow
+
+### Accessibility and Localization
+
+- Integrated menu translation functionality
+- Implemented screen-reader support using ARIA attributes and announcements
+- Added keyboard navigation support for the manager workflow
+- Added high-contrast and text-scaling modes
+
+### Reporting and Data
+
+- Implemented the manager **X-Report** for daily sales
+- Worked on database schema optimization, including indexing and query improvements
+
+### Customer Experience
+
+- Added drink size options for small, medium, and large
+- Added hot drink customization where applicable
+- Added quantity controls so customers can increase or decrease multiple items in an order
+- Updated the UI so the top header remains visible during navigation
+
+### Testing and Usability
+
+- Performed acceptance-criteria verification for:
+  - Customer kiosk
+  - Cashier POS
+  - Manager dashboard
+- Set up usability testing and feedback collection
+- Contributed to the final technical demo script and video
+
+Because this public repository is a sanitized copy rather than the original course repository, its commit history does **not** represent the full semester-long team development history.
+
+## Key Features
 
 ### Customer Kiosk
 
-- Browse drinks and add-ons
-- Filter menu items by category
-- Customize drink size, temperature, ice level, sugar level, and add-ons
-- Maintain a shopping cart and place orders
-- View order confirmations and receipts
-- Save favorite drinks for signed-in customers
-- View recent orders and reorder previous purchases
-- Receive weather-aware drink recommendations
-- Translate interface text into multiple languages
-- Use high-contrast and adjustable-text-size accessibility modes
+- Menu browsing and category filtering
+- Drink customization:
+  - Size
+  - Temperature
+  - Ice level
+  - Sugar level
+  - Add-ons
+- Cart and checkout flow
+- Digital receipt display
+- Favorites and recent-order support
+- Reordering previous purchases
+- Weather-aware drink recommendations
+- Multilingual interface support
+- Accessibility controls
 
 ### Cashier POS
 
-- Employee authentication flows
-- Build and customize customer orders
-- Process orders and generate receipts
-- View and update the active order queue
-- Review transaction history
-- Inspect order details
-- Process refunds
-- Access recipe information
+- Employee login
+- Order creation and customization
+- Active order queue
+- Transaction history
+- Order details
+- Refund workflow
+- Receipt generation
+- Recipe lookup
 
 ### Manager Dashboard
 
-- View revenue, order counts, average order value, and low-stock metrics
-- Review daily sales summaries and recent orders
-- Monitor and restock inventory
-- Update menu prices and menu items
-- Manage employees and roles
-- Manage recipes and ingredient quantities
-- Generate X-Reports for current-day sales
-- Preview and finalize Z-Reports
-- Review historical Z-Reports
+- Revenue and order metrics
+- Inventory monitoring and restocking
+- Menu price and item management
+- Employee management
+- Recipe management
+- X-Report and Z-Report workflows
+- Historical sales reporting
 
 ### AI Menu Assistant
 
-The backend includes a conversational menu assistant using the Google Gemini API. The service retrieves current menu data from PostgreSQL and injects that data into the model context so the assistant can answer menu questions and make recommendations based on items that actually exist in the database.
+The backend includes a conversational menu assistant powered by the Google Gemini API.
 
-The Gemini API key is read from server-side environment configuration and is **not included** in this repository.
+The service retrieves the current menu from PostgreSQL and supplies that menu data as context to the model so it can answer menu-related questions and make recommendations based on items that actually exist in the system.
+
+API credentials are read from environment variables and are not included in this public repository.
 
 ### Accessibility
 
-The frontend includes accessibility-focused functionality such as:
+The frontend includes:
 
-- Standard and high-contrast display modes
-- Normal, large, and extra-large text settings
+- High-contrast mode
+- Multiple text-size settings
 - Persistent accessibility preferences
-- Keyboard-oriented navigation support
+- Keyboard-oriented navigation
 - ARIA labels and live announcements
-- Multilingual interface support
+- Multilingual support
 
-### Weather-Aware Recommendations
+### Weather-Based Recommendations
 
-The customer kiosk integrates current weather data from Open-Meteo and uses local temperature to surface drink recommendations.
+The customer kiosk uses weather data from Open-Meteo to surface drink recommendations based on local temperature.
 
-### QA and Usability Testing
+### QA and Usability Tools
 
-The project also contains internal testing utilities for:
+The project includes internal tools for:
 
 - Acceptance-criteria checklists
 - Pass/fail tracking
 - Test notes
 - Markdown and JSON test-result export
-- Usability feedback collection
+- Usability feedback
 - Task-success tracking
 - Ease-of-use ratings
 - Completion-time measurements
@@ -124,7 +170,7 @@ External integrations:
 - Google OAuth
 - Google Gemini
 - Open-Meteo
-- MyMemory translation service
+- Translation service
 ```
 
 ## Technology Stack
@@ -134,8 +180,8 @@ External integrations:
 - React 18
 - React Router
 - JavaScript
-- Google OAuth
 - HTML/CSS
+- Google OAuth
 
 ### Backend
 
@@ -152,35 +198,31 @@ External integrations:
 - SQL
 - Database migrations
 - Seed scripts
-- Database indexing and optimization scripts
+- Database indexing and query optimization
 - Environment-based configuration
 
 ## Code Worth Exploring
 
-- `frontend/src/pages/CustomerKiosk.js` — customer ordering, customization, favorites, weather recommendations, and order history
-- `frontend/src/pages/Cashier.js` — cashier POS workflow and order management
-- `frontend/src/pages/Manager.js` — inventory, employee, recipe, pricing, and reporting workflows
-- `backend/routes/orders.js` — transactional order creation, line items, add-ons, inventory deduction, queues, and refunds
+- `backend/routes/orders.js` — order creation, line items, add-ons, inventory deduction, queues, and refunds
+- `backend/routes/reports.js` — sales reporting workflows
 - `backend/routes/chatbot.js` — Gemini integration with database-driven menu context
-- `backend/routes/reports.js` — X-Report and Z-Report functionality
+- `frontend/src/pages/CustomerKiosk.js` — ordering, customization, favorites, weather recommendations, and order history
+- `frontend/src/pages/Cashier.js` — cashier workflow and transaction management
+- `frontend/src/pages/Manager.js` — inventory, employee, recipe, pricing, and reporting workflows
 - `frontend/src/components/AccessibilityWidget.js` — persistent accessibility controls
-- `frontend/src/pages/QAConsole.js` — acceptance-testing workflow and test-result export
+- `frontend/src/pages/QAConsole.js` — acceptance-testing workflow
 - `frontend/src/pages/UserStudy.js` — usability-testing data collection
 
-## Collaboration and Portfolio Note
+A more detailed breakdown of my assigned work is available in [CONTRIBUTIONS.md](./CONTRIBUTIONS.md).
 
-This was a **team project**. I am sharing this sanitized portfolio version with permission to make the project reviewable while protecting credentials, private infrastructure, personal account information, and other material that should not be published.
-
-The original collaborative repository remains private. This public snapshot should be evaluated as a team software-engineering artifact; it does not claim that every file in the repository was authored by a single contributor.
-
-## Local Development
+## Running Locally
 
 ### Prerequisites
 
 - Node.js and npm
 - PostgreSQL
-- A Google OAuth client ID if testing Google sign-in
-- A Gemini API key if testing the AI assistant
+- Google OAuth client ID if testing Google sign-in
+- Gemini API key if testing the AI assistant
 
 ### Backend
 
@@ -188,11 +230,6 @@ The original collaborative repository remains private. This public snapshot shou
 cd backend
 npm install
 cp .env.example .env
-```
-
-Configure `.env` for your own PostgreSQL instance and optional API integrations, then run:
-
-```bash
 npm start
 ```
 
@@ -221,36 +258,25 @@ http://localhost:3000
 
 ## Database Note
 
-The original application used a course-hosted PostgreSQL database. That database and its credentials are intentionally not included in this public portfolio snapshot.
+The original application used a Texas A&M course-hosted PostgreSQL database. That database and its credentials are not included here.
 
-The source archive contains representative database tooling such as seed data, migrations, usability-table SQL, recipe support, and optimization/index scripts. The complete original base schema was not included in the archive used to produce this public snapshot, so a compatible PostgreSQL schema is required to run the entire application locally.
+This repository contains seed data, migration scripts, usability-table SQL, recipe support, and optimization/index scripts. The complete original base schema was not part of the archive used to create this public copy, so a compatible PostgreSQL schema is required to run the full application locally.
 
-## Environment Configuration
+## Portfolio Copy / Sanitization Note
 
-Real environment files are excluded from version control. Use these templates instead:
+This repository exists so recruiters can review a project that was originally developed in a private Texas A&M course organization.
 
-```text
-backend/.env.example
-frontend/.env.example
-```
+Before moving the project to my personal account, I removed or replaced:
 
-Do not commit real database passwords, OAuth credentials, API keys, or other secrets.
+- Database credentials
+- API keys
+- Real `.env` files
+- Personal staff-account email fallbacks
+- Private course/deployment configuration
+- Original image assets whose licensing could not be verified
 
-## Security / Deployment Note
-
-This codebase was built as an academic prototype and is **not presented as a production-hardened system**. Before deploying it against real or sensitive data, add production-grade authorization controls, stricter CORS configuration, rate limiting, secret management, validation, and other appropriate security controls.
-
-## Public-Snapshot Changes
-
-For this portfolio version:
-
-- Real `.env` files were removed
-- Database credentials and API keys were excluded
-- Personal staff-account email fallbacks were removed
-- Frontend API and Google OAuth configuration were moved to environment variables
-- Original image assets were replaced with generated placeholders because their licensing could not be verified from the provided archive
-- Private Render/Texas A&M deployment references were removed from documentation and frontend configuration
+The application itself remains a **collaborative school project**, and I do not claim sole authorship of the full codebase.
 
 ## License
 
-No open-source license is granted by this repository. This is a public portfolio snapshot of a collaborative academic project.
+No open-source license is granted by this repository. This is a public portfolio copy of a collaborative academic project.
